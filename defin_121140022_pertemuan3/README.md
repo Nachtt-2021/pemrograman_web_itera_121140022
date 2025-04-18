@@ -7,6 +7,12 @@ Aplikasi ini adalah proyek tugas untuk mata kuliah Pemrograman Web di **Institut
 Proyek ini bertujuan untuk mengasah pemahaman dasar mengenai pengembangan aplikasi web dengan React dan praktik implementasi pemrograman web.
 
 ---
+Screenshot Antarmuka
+
+![My Image](my-image.png)
+![Halaman Produk](2.png)
+![Halaman Keranjang](3.png )
+
 
 ## ⚙️ Instruksi Instalasi dan Menjalankan
 
@@ -21,15 +27,6 @@ npm install
 5. Jalankan Aplikasi
 npm start
 Aplikasi akan berjalan di: http://localhost:3000
-
-📸 Screenshot Antarmuka
-
-
-📍 Halaman Utama
-
-📍 Halaman Produk
-
-📍 Halaman Keranjang
 
 Fitur React yang Digunakan
 Functional Component
