@@ -9,7 +9,7 @@ Proyek ini bertujuan untuk mengasah pemahaman dasar mengenai pengembangan aplika
 ---
 Screenshot Antarmuka
 
-![My Image](my-image.png)
+![My Image](1.png)
 ![Halaman Produk](2.png)
 ![Halaman Keranjang](3.png )
 
