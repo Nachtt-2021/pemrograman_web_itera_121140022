@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# 💻 Aplikasi Pemrograman Web – Pertemuan 3
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🎯 Deskripsi Aplikasi
 
-## Available Scripts
+Aplikasi ini adalah proyek tugas untuk mata kuliah Pemrograman Web di **Institut Teknologi Sumatera (ITERA)**. Aplikasi ini dibangun menggunakan **React.js** dan digunakan untuk mempelajari dasar-dasar pengembangan aplikasi web interaktif. Proyek ini melibatkan pembuatan beberapa komponen, pengelolaan state, penggunaan React Router, dan penanganan event.
 
-In the project directory, you can run:
+Proyek ini bertujuan untuk mengasah pemahaman dasar mengenai pengembangan aplikasi web dengan React dan praktik implementasi pemrograman web.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ⚙️ Instruksi Instalasi dan Menjalankan
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+1. clone repositori
+```bash
+git clone https://github.com/Nachtt-2021/pemrograman_web_itera_121140022.git
+3. Masuk ke Direktori Proyek
+cd pemrograman_web_itera_121140022
+4. Install Dependencies
+npm install
+5. Jalankan Aplikasi
+npm start
+Aplikasi akan berjalan di: http://localhost:3000
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📸 Screenshot Antarmuka
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+📍 Halaman Utama
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+📍 Halaman Produk
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+📍 Halaman Keranjang
 
-### `npm run eject`
+Fitur React yang Digunakan
+Functional Component
+Digunakan dalam semua bagian aplikasi agar ringan dan mudah dibaca.
+useState & useEffect
+const [products, setProducts] = useState([]);
+useEffect(() => {
+  fetchProducts();
+}, []);
+React Router v6
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Navigasi antar halaman:
+import { Routes, Route } from 'react-router-dom';
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/products" element={<Products />} />
+  <Route path="/cart" element={<Cart />} />
+</Routes>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Context API
+Pengelolaan state global untuk keranjang belanja:
+<CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
+  {children}
+</CartContext.Provider>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Komentar dalam Kode
+Komentar ditambahkan pada bagian-bagian penting dalam kode seperti:
+// Fungsi untuk menambahkan produk ke cart
+const addToCart = (product) => {
+  setCartItems((prevItems) => [...prevItems, product]);
+};
 
-## Learn More
+// Fungsi untuk menghapus produk dari cart berdasarkan ID
+const removeFromCart = (id) => {
+  setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
+};
+Komentar tambahan juga tersedia dalam file CartContext.js dan setiap komponen penting untuk memudahkan pemahaman.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🧪 Laporan Testing
+Navigasi Halaman
+Sudah diuji dan berjalan dengan baik tanpa reload antar halaman.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Add to Cart
+Berhasil menambahkan produk ke keranjang dan tampil dinamis.
 
-### Code Splitting
+Hapus dari Cart
+Tombol hapus produk bekerja dengan baik.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Responsif
+Antarmuka diuji pada perangkat mobile dan tablet.
 
-### Analyzing the Bundle Size
+Bukti Screenshot Testing
+Letakkan file screenshot di folder /screenshots.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📬 Kontak
+Nama: Defin Surjaniah
+NIM: 121140022
+Email: defin@students.itera.ac.id
