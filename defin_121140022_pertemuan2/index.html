@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Uang Jajan Tracker</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Uang Jajan Tracker </h1>
+
+    <!-- Form Input -->
+    <form id="transaction-form">
+      <input type="text" id="desc" placeholder="Deskripsi" required />
+      <input type="number" id="amount" placeholder="Nominal" required />
+      <input type="date" id="date" required />
+      <select id="category" required>
+        <option value="">Pilih Kategori</option>
+        <option value="lain-lain">Pemasukan</option>
+        <option value="makan">Makan</option>
+        <option value="nongki">Nongki</option>
+        <option value="bensin">Bensin</option>
+        <option value="lainnya">Lainnya</option>
+      </select>
+      <select id="type" required>
+        <option value="income">Pemasukan</option>
+        <option value="expense">Pengeluaran</option>
+      </select>
+      <button type="submit">Tambah</button>
+    </form>
+
+    <!-- Ringkasan -->
+    <div class="summary">
+      <p>Total Saldo: <span id="balance">Rp0</span></p>
+      <p>Total Pemasukan: <span id="total-income">Rp0</span></p>
+      <p>Total Pengeluaran: <span id="total-expense">Rp0</span></p>
+    </div>
+
+    <!-- Filter -->
+    <div class="filters">
+      <input type="date" id="filter-date" />
+      <select id="filter-category">
+        <option value="">Semua Kategori</option>
+        <option value="makan">Makan</option>
+        <option value="nongki">Nongki</option>
+        <option value="bensin">Bensin</option>
+        <option value="lainnya">Lainnya</option>
+      </select>
+      <button id="reset-filter">Reset</button>
+    </div>
+
+    <!-- Daftar Transaksi -->
+    <ul id="transaction-list"></ul>
+
+    <!-- Chart -->
+    <canvas id="category-chart"></canvas>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
